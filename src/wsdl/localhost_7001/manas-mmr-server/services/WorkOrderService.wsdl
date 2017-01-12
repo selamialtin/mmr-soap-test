@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://ws.integration.metermanager.manas.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://ws.integration.metermanager.manas.com" xmlns:intf="http://ws.integration.metermanager.manas.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://ws.integration.metermanager.manas.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="loadCreditBySerialNumber">
+    <complexType>
+     <sequence>
+      <element name="username" type="xsd:string"/>
+      <element name="password" type="xsd:string"/>
+      <element name="serialNumber" type="xsd:string"/>
+      <element name="issue" type="xsd:string"/>
+      <element name="credit" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="loadCreditBySerialNumberResponse">
+    <complexType>
+     <sequence>
+      <element name="loadCreditBySerialNumberReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="readMeterBySerialNumber">
+    <complexType>
+     <sequence>
+      <element name="username" type="xsd:string"/>
+      <element name="password" type="xsd:string"/>
+      <element name="serialNumber" type="xsd:string"/>
+      <element name="issue" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="readMeterBySerialNumberResponse">
+    <complexType>
+     <sequence>
+      <element name="readMeterBySerialNumberReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="openValveBySerialNumber">
+    <complexType>
+     <sequence>
+      <element name="username" type="xsd:string"/>
+      <element name="password" type="xsd:string"/>
+      <element name="serialNumber" type="xsd:string"/>
+      <element name="issue" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="openValveBySerialNumberResponse">
+    <complexType>
+     <sequence>
+      <element name="openValveBySerialNumberReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="clearFlagBySerialNumber">
+    <complexType>
+     <sequence>
+      <element name="username" type="xsd:string"/>
+      <element name="password" type="xsd:string"/>
+      <element name="serialNumber" type="xsd:string"/>
+      <element name="issue" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="clearFlagBySerialNumberResponse">
+    <complexType>
+     <sequence>
+      <element name="clearFlagBySerialNumberReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="loadCreditAndSetSettings">
+    <complexType>
+     <sequence>
+      <element name="username" type="xsd:string"/>
+      <element name="password" type="xsd:string"/>
+      <element name="meterId" type="xsd:string"/>
+      <element name="credit" type="xsd:string"/>
+      <element name="criticalCredit" type="xsd:string"/>
+      <element name="setting" type="xsd:string"/>
+      <element name="displaySettings" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="loadCreditAndSetSettingsResponse">
+    <complexType>
+     <sequence>
+      <element name="loadCreditAndSetSettingsReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="closeValveBySerialNumber">
+    <complexType>
+     <sequence>
+      <element name="username" type="xsd:string"/>
+      <element name="password" type="xsd:string"/>
+      <element name="serialNumber" type="xsd:string"/>
+      <element name="issue" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="closeValveBySerialNumberResponse">
+    <complexType>
+     <sequence>
+      <element name="closeValveBySerialNumberReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="loadCreditAndSetSettingsBySerialNumber">
+    <complexType>
+     <sequence>
+      <element name="username" type="xsd:string"/>
+      <element name="password" type="xsd:string"/>
+      <element name="serialNumber" type="xsd:string"/>
+      <element name="issue" type="xsd:string"/>
+      <element name="credit" type="xsd:string"/>
+      <element name="criticalCredit" type="xsd:string"/>
+      <element name="setting" type="xsd:string"/>
+      <element name="displaySettings" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="loadCreditAndSetSettingsBySerialNumberResponse">
+    <complexType>
+     <sequence>
+      <element name="loadCreditAndSetSettingsBySerialNumberReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="closeValve">
+    <complexType>
+     <sequence>
+      <element name="username" type="xsd:string"/>
+      <element name="password" type="xsd:string"/>
+      <element name="meterId" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="closeValveResponse">
+    <complexType>
+     <sequence>
+      <element name="closeValveReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="findMeter">
+    <complexType>
+     <sequence>
+      <element name="username" type="xsd:string"/>
+      <element name="password" type="xsd:string"/>
+      <element name="serialNumber" type="xsd:string"/>
+      <element name="issue" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="findMeterResponse">
+    <complexType>
+     <sequence>
+      <element name="findMeterReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="readMeter">
+    <complexType>
+     <sequence>
+      <element name="username" type="xsd:string"/>
+      <element name="password" type="xsd:string"/>
+      <element name="meterId" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="readMeterResponse">
+    <complexType>
+     <sequence>
+      <element name="readMeterReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="openValve">
+    <complexType>
+     <sequence>
+      <element name="username" type="xsd:string"/>
+      <element name="password" type="xsd:string"/>
+      <element name="meterId" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="openValveResponse">
+    <complexType>
+     <sequence>
+      <element name="openValveReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="loadCredit">
+    <complexType>
+     <sequence>
+      <element name="username" type="xsd:string"/>
+      <element name="password" type="xsd:string"/>
+      <element name="meterId" type="xsd:string"/>
+      <element name="credit" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="loadCreditResponse">
+    <complexType>
+     <sequence>
+      <element name="loadCreditReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="clearFlag">
+    <complexType>
+     <sequence>
+      <element name="username" type="xsd:string"/>
+      <element name="password" type="xsd:string"/>
+      <element name="meterId" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="clearFlagResponse">
+    <complexType>
+     <sequence>
+      <element name="clearFlagReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="loadCreditAndSetSettingsBySerialNumberRequest">
+
+      <wsdl:part element="impl:loadCreditAndSetSettingsBySerialNumber" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="loadCreditResponse">
+
+      <wsdl:part element="impl:loadCreditResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="loadCreditAndSetSettingsResponse">
+
+      <wsdl:part element="impl:loadCreditAndSetSettingsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="readMeterBySerialNumberResponse">
+
+      <wsdl:part element="impl:readMeterBySerialNumberResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="closeValveResponse">
+
+      <wsdl:part element="impl:closeValveResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="openValveRequest">
+
+      <wsdl:part element="impl:openValve" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="findMeterResponse">
+
+      <wsdl:part element="impl:findMeterResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="loadCreditBySerialNumberResponse">
+
+      <wsdl:part element="impl:loadCreditBySerialNumberResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="openValveBySerialNumberResponse">
+
+      <wsdl:part element="impl:openValveBySerialNumberResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="clearFlagBySerialNumberRequest">
+
+      <wsdl:part element="impl:clearFlagBySerialNumber" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="loadCreditRequest">
+
+      <wsdl:part element="impl:loadCredit" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="loadCreditAndSetSettingsRequest">
+
+      <wsdl:part element="impl:loadCreditAndSetSettings" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="openValveResponse">
+
+      <wsdl:part element="impl:openValveResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="readMeterResponse">
+
+      <wsdl:part element="impl:readMeterResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="closeValveRequest">
+
+      <wsdl:part element="impl:closeValve" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="readMeterRequest">
+
+      <wsdl:part element="impl:readMeter" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="clearFlagRequest">
+
+      <wsdl:part element="impl:clearFlag" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="openValveBySerialNumberRequest">
+
+      <wsdl:part element="impl:openValveBySerialNumber" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="clearFlagBySerialNumberResponse">
+
+      <wsdl:part element="impl:clearFlagBySerialNumberResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="closeValveBySerialNumberRequest">
+
+      <wsdl:part element="impl:closeValveBySerialNumber" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="findMeterRequest">
+
+      <wsdl:part element="impl:findMeter" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="readMeterBySerialNumberRequest">
+
+      <wsdl:part element="impl:readMeterBySerialNumber" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="loadCreditBySerialNumberRequest">
+
+      <wsdl:part element="impl:loadCreditBySerialNumber" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="closeValveBySerialNumberResponse">
+
+      <wsdl:part element="impl:closeValveBySerialNumberResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="clearFlagResponse">
+
+      <wsdl:part element="impl:clearFlagResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="loadCreditAndSetSettingsBySerialNumberResponse">
+
+      <wsdl:part element="impl:loadCreditAndSetSettingsBySerialNumberResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="WorkOrderService">
+
+      <wsdl:operation name="loadCreditBySerialNumber">
+
+         <wsdl:input message="impl:loadCreditBySerialNumberRequest" name="loadCreditBySerialNumberRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:loadCreditBySerialNumberResponse" name="loadCreditBySerialNumberResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="readMeterBySerialNumber">
+
+         <wsdl:input message="impl:readMeterBySerialNumberRequest" name="readMeterBySerialNumberRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:readMeterBySerialNumberResponse" name="readMeterBySerialNumberResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="openValveBySerialNumber">
+
+         <wsdl:input message="impl:openValveBySerialNumberRequest" name="openValveBySerialNumberRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:openValveBySerialNumberResponse" name="openValveBySerialNumberResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="clearFlagBySerialNumber">
+
+         <wsdl:input message="impl:clearFlagBySerialNumberRequest" name="clearFlagBySerialNumberRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:clearFlagBySerialNumberResponse" name="clearFlagBySerialNumberResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="loadCreditAndSetSettings">
+
+         <wsdl:input message="impl:loadCreditAndSetSettingsRequest" name="loadCreditAndSetSettingsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:loadCreditAndSetSettingsResponse" name="loadCreditAndSetSettingsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="closeValveBySerialNumber">
+
+         <wsdl:input message="impl:closeValveBySerialNumberRequest" name="closeValveBySerialNumberRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:closeValveBySerialNumberResponse" name="closeValveBySerialNumberResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="loadCreditAndSetSettingsBySerialNumber">
+
+         <wsdl:input message="impl:loadCreditAndSetSettingsBySerialNumberRequest" name="loadCreditAndSetSettingsBySerialNumberRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:loadCreditAndSetSettingsBySerialNumberResponse" name="loadCreditAndSetSettingsBySerialNumberResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="closeValve">
+
+         <wsdl:input message="impl:closeValveRequest" name="closeValveRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:closeValveResponse" name="closeValveResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="findMeter">
+
+         <wsdl:input message="impl:findMeterRequest" name="findMeterRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:findMeterResponse" name="findMeterResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="readMeter">
+
+         <wsdl:input message="impl:readMeterRequest" name="readMeterRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:readMeterResponse" name="readMeterResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="openValve">
+
+         <wsdl:input message="impl:openValveRequest" name="openValveRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:openValveResponse" name="openValveResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="loadCredit">
+
+         <wsdl:input message="impl:loadCreditRequest" name="loadCreditRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:loadCreditResponse" name="loadCreditResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="clearFlag">
+
+         <wsdl:input message="impl:clearFlagRequest" name="clearFlagRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:clearFlagResponse" name="clearFlagResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="WorkOrderServiceSoapBinding" type="impl:WorkOrderService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="loadCreditBySerialNumber">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="loadCreditBySerialNumberRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="loadCreditBySerialNumberResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="readMeterBySerialNumber">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="readMeterBySerialNumberRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="readMeterBySerialNumberResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="openValveBySerialNumber">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="openValveBySerialNumberRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="openValveBySerialNumberResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="clearFlagBySerialNumber">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="clearFlagBySerialNumberRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="clearFlagBySerialNumberResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="loadCreditAndSetSettings">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="loadCreditAndSetSettingsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="loadCreditAndSetSettingsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="closeValveBySerialNumber">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="closeValveBySerialNumberRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="closeValveBySerialNumberResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="loadCreditAndSetSettingsBySerialNumber">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="loadCreditAndSetSettingsBySerialNumberRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="loadCreditAndSetSettingsBySerialNumberResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="closeValve">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="closeValveRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="closeValveResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="findMeter">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="findMeterRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="findMeterResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="readMeter">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="readMeterRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="readMeterResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="openValve">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="openValveRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="openValveResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="loadCredit">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="loadCreditRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="loadCreditResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="clearFlag">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="clearFlagRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="clearFlagResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="WorkOrderServiceService">
+
+      <wsdl:port binding="impl:WorkOrderServiceSoapBinding" name="WorkOrderService">
+
+         <wsdlsoap:address location="http://localhost:7001/manas-mmr-server/services/WorkOrderService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
